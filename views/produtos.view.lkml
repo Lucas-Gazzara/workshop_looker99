@@ -10,6 +10,7 @@ view: produtos {
 
   dimension: produto_id {
     primary_key: yes
+    label: "ID"
     type: number
     sql: ${TABLE}.produto_id ;;
   }
@@ -19,21 +20,25 @@ view: produtos {
   # This dimension will be called "Produto Categoria" in Explore.
 
   dimension: produto_categoria {
+    label: "Categoria"
     type: string
     sql: ${TABLE}.produto_categoria ;;
   }
 
   dimension: produto_descricao {
+    label: "Descriçao"
     type: string
     sql: ${TABLE}.produto_descricao ;;
   }
 
   dimension: produto_nome {
+    label: "Nome"
     type: string
     sql: ${TABLE}.produto_nome ;;
   }
 
   dimension: produto_preco {
+    hidden: yes
     type: number
     sql: ${TABLE}.produto_preco ;;
   }
