@@ -46,11 +46,6 @@ view: pedidos {
     sql: ${TABLE}.pedido_status ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [pedido_id]
-  }
-
   dimension: data_date {
     label: "Data"
     type: date
@@ -83,4 +78,11 @@ view: pedidos {
     tiers: [180, 361, 540]
     style: integer
   }
+
+measure: count {
+  type: count
+  drill_fields: [pedido_id]
+
+}
+
 }

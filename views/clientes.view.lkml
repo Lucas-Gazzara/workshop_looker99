@@ -68,6 +68,6 @@ view: clientes {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [cliente_cpf]
   }
 }
