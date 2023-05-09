@@ -9,7 +9,8 @@ include: "/views/**/*.view"
 
 datagroup: workshop_looker99_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+  max_cache_age: "12 hour"
+  interval_trigger: "24 hour"
 }
 
 persist_with: workshop_looker99_default_datagroup

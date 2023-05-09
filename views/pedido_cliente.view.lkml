@@ -10,6 +10,7 @@ view: pedido_cliente {
       column: data_date { field: pedidos.data_date }
       column: item_pedido_subtotal { field: itens_pedidos.item_pedido_subtotal }
     }
+    datagroup_trigger: workshop_looker99_default_datagroup
   }
   dimension: cliente_nome {
     label: "Clientes Nome"
