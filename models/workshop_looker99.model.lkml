@@ -43,6 +43,18 @@ explore: clientes {
     type: full_outer
     sql_on: ${produtos.produto_id}=${itens_pedidos.item_pedido_produto_id} ;;
     relationship: one_to_many
-
   }
+  join: max_pedido_cliente {
+    type: full_outer
+    sql_on: ${clientes.cliente_cpf}=${max_pedido_cliente.clientes_cliente_cpf} ;;
+    relationship: one_to_many
+  }
+
+  join: pedido_cliente {
+    type: full_outer
+    sql_on: ${clientes.cliente_cpf}=${pedido_cliente.cliente_cpf} ;;
+    relationship: one_to_many
+  }
+
+
 }
